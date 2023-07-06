@@ -1,0 +1,169 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+li {list-style-type:none; }
+a { text-decoration:none; color:inherit; }
+body {font-family: 'Pretendard-Regular'; }
+
+/* common */
+.inner{
+  width: 1100px; margin:0 auto; 
+  position:relative; 
+}
+
+/* header */
+header {
+  width: 100%; border-bottom: 1px solid #ddd; 
+}
+
+header > .inner {height: 120px;}
+header h1 {
+  position: absolute; left:0; bottom:15px; 
+}
+
+header h1 a {
+  font:700 24px/1 'Pretendard-Regular'; color: #444;
+}
+
+header .util {
+  display:flex; 
+  position: absolute; top:20px; right: 30px;
+}
+
+/* float를 쓰고 상위에 absolute가 있으면 자동으로 해제 해제가 안된다면 그 상위에서 해제 */
+/* 영역을 꼭 널혀줘야 한다. */
+header .util a {
+  display:block; font-size:12px; color:#999; padding: 5px 10px;
+}
+
+header .gnb {
+  display: flex;;
+  position: absolute; bottom:0; right:0;
+}
+
+header .gnb li a{
+  display:block; font-weight: 700; padding: 20px 40px;
+  transition:.5s; color:#555; 
+}
+
+header .gnb li:hover a {
+  background-color: #555; color:#fff;
+}
+
+/* 서브메뉴 */
+/* header div.bg_box{
+  position: absolute; left: 0; top:120px;
+  width:100vw; height:0; background-color:aqua;
+  z-index:-1; 
+  margin-left: calc(-1*((100vw - 1100px)/2));
+  transition: .5s; overflow:hidden;
+} 
+
+header .gnb:hover ~ .bg_box {
+  height:300px;
+}
+
+header .bg_box .inner_contents {
+  background-color: burlywood; height:100px;
+  position:absolute; width:100%; bottom:0; left:0;
+} */
+
+/* figure */
+figure {
+  width:100%; height: calc(100vh - 120px); background-color:#000;
+  position:relative; overflow:hidden; padding-top:250px;
+}
+
+figure video {
+  object-fit: cover;
+  width:100%; height:100%; opacity: .3;
+  position: absolute; top:0; left:0;
+}
+
+figure h1 {
+  font-size: 120px; color:#fff; margin-bottom: 20px; 
+}
+figure p {
+  font-size: 16px; color:#888; margin-bottom: 60px;
+}
+figure a {
+  display:block; width:400px; height:30px; border: 1px solid #bbb;
+  font: 600 11px/30px 'arial'; color:#fff; text-align:center; letter-spacing:1px; transition:.5s;
+}
+
+figure a:hover{
+  background-color:#fff; color:#555;
+}
+
+section {
+  width:100%; padding: 200px 0;
+}
+
+section h1{ font-size:24px; text-align:center; margin-bottom:50px; }
+
+section .wrap {width:100%; display:flex; gap:20px; justify-content:center;}
+
+section .wrap article{
+  width:200px;
+}
+section .wrap article h2 {
+  margin-bottom: 10px; 
+}
+
+section .wrap article h2 a{
+  font: 800 16px/1 'arial' ; color:#555;
+}
+
+section .wrap article p{
+  font: 14px/1.4 'arial' ; color:#777;
+}
+
+section .wrap article .pic{
+  width: 100%; height:120px; background: #333; margin-bottom: 15px; position:relative; overflow:hidden;
+}
+
+section .wrap article .pic img{
+  width:100%; height:100%; object-fit: cover;
+}
+
+/* footer */
+footer {
+  width:100%; background-color:#333; padding:100px 0;
+  border-top: 3px solid #000;
+}
+
+footer .upper {
+  width: 100%; border-bottom: 1px solid #777; padding-bottom:20px; display:flex; justify-content:space-between;
+}
+
+footer .upper h1{
+  font: 700 24px/1 'arial'; color:#666;
+}
+
+footer .upper ul{
+  display:flex;
+}
+
+footer .upper ul li a{
+  display:block; padding:5px 10px;
+  font-weight: 600; font-size:12px; color:#666; 
+}
+
+footer .lower {
+  width:100%; padding-top: 20px;
+}
+
+footer .lower address {
+  width:100%; font-size:12px; color:#777; margin-bottom:10px; line-height:1.5;
+}
+
+footer .lower p {
+  width:100%; font-size:12px; color:#777; font-weight:700;
+}
